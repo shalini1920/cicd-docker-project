@@ -1,0 +1,24 @@
+# CI/CD Pipeline with Docker and GitHub Actions
+
+![CI/CD Pipeline](https://github.com/Shalini1920/cicd-docker-project/actions/workflows/pipeline.yml/badge.svg)
+
+## Project Overview
+
+This project demonstrates a **complete CI/CD pipeline** using:
+
+- Docker
+- GitHub Actions
+- Docker Hub
+- Automated Testing
+
+Whenever code is pushed to the repository, the pipeline automatically:
+
+1. Runs tests
+2. Builds a Docker image
+3. Pushes the image to Docker Hub
+
+---
+
+## Docker Image
+
+https://hub.docker.com/r/shalzz19/cicd-app
