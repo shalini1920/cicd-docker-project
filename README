@@ -1,24 +1,115 @@
-# CI/CD Pipeline with Docker and GitHub Actions
+# CI/CD Pipeline with Docker, GitHub Actions, and Docker Hub
 
 ![CI/CD Pipeline](https://github.com/Shalini1920/cicd-docker-project/actions/workflows/pipeline.yml/badge.svg)
 
 ## Project Overview
 
-This project demonstrates a **complete CI/CD pipeline** using:
+This project demonstrates a **complete CI/CD (Continuous Integration and Continuous Deployment) pipeline** using Docker and GitHub Actions.
 
+Whenever code is pushed to the repository, GitHub Actions automatically:
+
+1. Runs application tests
+2. Builds a Docker image
+3. Pushes the image to Docker Hub
+
+This project simulates a real **DevOps workflow used in modern cloud environments.**
+
+---
+
+## Architecture
+
+
+Developer Push Code
+↓
+GitHub
+↓
+GitHub Actions CI/CD
+↓
+Run Tests
+↓
+Build Docker Image
+↓
+Push Image to Docker Hub
+↓
+Deploy Container
+
+
+---
+
+## Tech Stack
+
+- Python (Flask)
 - Docker
 - GitHub Actions
 - Docker Hub
-- Automated Testing
+- Git
 
-Whenever code is pushed to the repository, the pipeline automatically:
+---
 
-1. Runs tests
-2. Builds a Docker image
-3. Pushes the image to Docker Hub
+## Project Structure
+
+
+cicd-docker-project
+│
+├── app
+│ └── app.py
+│
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── test_app.py
+│
+└── .github
+└── workflows
+└── pipeline.yml
+
 
 ---
 
 ## Docker Image
 
+Docker Hub Repository:
+
 https://hub.docker.com/r/shalzz19/cicd-app
+
+---
+
+## Running the Project Locally
+
+### Pull the Docker image
+
+
+docker pull shalzz19/cicd-app
+
+
+### Run the container
+
+
+docker run -p 5000:5000 shalzz19/cicd-app
+
+
+Open in browser:
+
+
+http://localhost:5000
+
+
+---
+
+## CI/CD Pipeline
+
+The pipeline automatically performs:
+
+- Code checkout
+- Dependency installation
+- Test execution
+- Docker image build
+- Docker image push to Docker Hub
+
+This pipeline is implemented using **GitHub Actions**.
+
+---
+
+## Author
+
+Shalini
